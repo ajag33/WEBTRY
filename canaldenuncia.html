@@ -119,31 +119,31 @@
 
                     <h4 class="text-center">Datos Personales del Denunciante (Opcional)</h4>
 
-                    <form>
+                    <form method="post" action="correo.php">
 
                         <div class="mb-3">
                             <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" placeholder="Ingrese Nombre" class="form-control" id="inputNombre">
+                            <input type="text" placeholder="Ingrese Nombre" name="nombre" class="form-control" id="inputNombre">
 
                         </div>
 
                         <div class="mb-3">
                             <label for="inputApellido" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="inputApellido" placeholder="Ingrese Apellidos">
+                            <input type="text" class="form-control" name="apellido" id="inputApellido" placeholder="Ingrese Apellidos">
 
                         </div>
 
                         <div class="mb-3">
                             <label for="inputCorreo" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="inputCorreo" placeholder="Ingrese Correo">
+                            <input type="email" class="form-control" name="correo" id="inputCorreo" placeholder="Ingrese Correo">
                         </div>
 
                         <div class="mb-3 ">
                             <label  for="inputTelefono">Telefono</label>
-                            <input type="text" class="form-control" id="inputTelefono" placeholder="Ingrese Telefono">
+                            <input type="text" class="form-control" name="telefono" id="inputTelefono" placeholder="Ingrese Telefono">
                             
                         </div>
-                        <button type="submit" class="btn btn-primary">Prox.</button>
+                        <button type="submit" name="enviar" class="btn btn-primary">Prox.</button>
                         
                     </div>
 
