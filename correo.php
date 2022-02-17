@@ -12,7 +12,7 @@ $asunto=$name." ".$apellido;
 $header="From: noreply@example.com"."\r\n";
 $header.="Reply-To: noreply@example.com"."\r\n";
 $header.="X-Mailer: PHP/".phpversion();
-    $email= @mail($correo,$asunto,$telefono,$header);
+    $email= mail($correo,$asunto,$telefono,$header);
     if($email){
         echo "DATOS ".$asunto." ".$correo." ".$telefono;
         echo "<h2>ENVIADO CON EXITO</h2>";
