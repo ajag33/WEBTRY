@@ -14,7 +14,7 @@ $header.="Reply-To: noreply@example.com"."\r\n";
 $header.="X-Mailer: PHP/".phpversion();
     $email= @mail($correo,$asunto,$telefono,$header);
     if($email){
-        echo "ENVIADO CON EXITO"
+        echo "ENVIADO CON EXITO";
     }
 
 
