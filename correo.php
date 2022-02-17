@@ -18,6 +18,7 @@ $header.="X-Mailer: PHP/".phpversion();
         echo "<h2>ENVIADO CON EXITO</h2>";
     }
     else{
+        echo "DATOS ".$asunto." ".$correo." ".$telefono;
 
         echo "<h2>ENVIADO SIN EXITO</h2>";
     }
