@@ -53,7 +53,7 @@ try {
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
-    echo 'Message has been sent';
+     header('location:formulario_plan_den.html');
 <<<<<<< HEAD
   
     
