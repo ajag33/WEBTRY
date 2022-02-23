@@ -54,14 +54,13 @@ try {
 
     $mail->send();
      header('location:formulario_plan_den.html');
-<<<<<<< HEAD
-  
-    
+     
     }
-  
-=======
-    header("location:index.html");
->>>>>>> 0e736a4ff76f167dfcc543932b3dcbf26bc0bb8e
+
+     }
+     else{
+         echo "no haga eso";
+     }
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
