@@ -15,7 +15,16 @@ require "PHPMailer/src/SMTP.php";
 $mail = new PHPMailer(true);
 
 try {
-    //Server settings
+    if(isset($_POST['enviar'])){
+        $name=$_POST['nombre'];
+         $apellido=$_POST['apellido'];
+        $correo=$_POST['correo'];
+        $telefono=$_POST['telefono'];
+        $asunto=$name." ".$apellido." ".$correo." ".$telefono;
+    
+        //server 
+
+         //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -39,12 +48,16 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'ASUNTO DEL CORREO';
+    $mail->Subject =$asunto;
     $mail->Body    = 'CUERPO DEL CORREO <b>in bold!</b>';
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
     echo 'Message has been sent';
+  
+    
+    }
+  
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
