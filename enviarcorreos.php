@@ -48,8 +48,8 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject =$asunto;
-    $mail->Body    = 'CUERPO DEL CORREO <b>in bold!</b>';
+    $mail->Subject =$name;
+    $mail->Body    = 'CUERPO DEL CORREO :'.$asunto;
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
@@ -57,10 +57,12 @@ try {
      
     }
 
-     }
+    
      else{
          echo "no haga eso";
      }
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+?>
