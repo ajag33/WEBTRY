@@ -53,7 +53,7 @@ try {
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
-     header("location:http://www.toshiko.com.pe/formulario_plan_den.html");
+    
      
     }
 
@@ -61,6 +61,7 @@ try {
      else{
          echo "no haga eso";
      }
+     header("location:http://www.toshiko.com.pe/formulario_plan_den.html");
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
