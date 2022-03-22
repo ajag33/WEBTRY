@@ -53,7 +53,7 @@ try {
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
-     header('location:formulario_plan_den.html');
+     header("location:http://www.toshiko.com.pe/formulario_plan_den.html");
      
     }
 
