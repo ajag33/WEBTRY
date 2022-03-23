@@ -95,7 +95,7 @@
 
                 <h3 class="text-center">FORULARIO DE PLANTEAMIENTO DE SUGERENCIAS O DENUNCIAS</h3>
 
-                <form>
+               <form  method="post" action="enviarcorreos2.php">
                     <!-- DATOS PERSONALES-->
                     <div class="row">
 
@@ -109,20 +109,20 @@
 
                             <div class="mb-6 p-2">
 
-                                <input type="text" placeholder="Ingrese Nombre" class="form-control" id="inputNombre">
+                                <input type="text" name="nombre" placeholder="Ingrese Nombre" class="form-control" id="inputNombre">
 
                             </div>
                         </div>
 
                         <div class="col-lg-2">
-                            <label for="inputApellido" class="form-label">Apellidos</label>
+                            <label for="inputApellido"  class="form-label">Apellidos</label>
                         </div>
 
                         <div class="col-lg-10">
 
                             <div class="mb-6 p-2">
 
-                                <input type="text" class="form-control" id="inputApellido"
+                                <input type="text" name="apellido" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Apellidos">
 
                             </div>
@@ -149,40 +149,40 @@
 </div>
                             <div class="row">
                                 <div class="col-lg-7 mb-2 p-1">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="involucrado1" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Involucrado">
                                 </div>
                                 <div class="col-lg-4 mb-2 p-1">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="puesto1" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Puesto">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-7 mb-2 p-1">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="involucrado2" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Involucrado">
                                 </div>
                                 <div class="col-lg-4 mb-2 p-1">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="puesto2" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Puesto">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-lg-7 p-2">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="involucrado3" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Involucrado">
                                 </div>
                                 <div class="col-lg-4 mb-2 p-1">
-                                    <input type="text" class="form-control" id="inputApellido"
+                                    <input type="text" name="puesto3" class="form-control" id="inputApellido"
                                     placeholder="Ingrese Puesto">
                                 </div>
                             </div>
                             
                            
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <textarea class="form-control" name="detallehecho" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                                 <label for="floatingTextarea2">Detalle Dia, Hora Lugar, Sospechoso(Involucrado y Acccion que estuvo mal)</label>
                               </div>
 
@@ -225,12 +225,12 @@
 
                             <div class="mb-6 p-4">
 
-                                <input type="text" placeholder="Ingrese Contacto" class="form-control" id="inputNombre">
+                                <input type="text"  name="contacto" placeholder="Ingrese Contacto" class="form-control" id="inputNombre">
 
                             </div>
                         </div>
 
-                       
+                        <button type="submit" name="enviar" class="btn btn-primary">Enviar</button>
 
                        
 
@@ -239,6 +239,7 @@
                     <!-- FIN DE DATOS EXTRAS-->
 
                     <p class="text-center"></p> Puede enviar las pruebas al siguiente correo <strong>denucias@toshiko.com.pe / administracion@toshiko.com.pe</strong></p>
+
 
 
                 </form>
