@@ -54,14 +54,16 @@ try {
 
     $mail->send();
     
-     
+     echo "<script>location.href='http://www.toshiko.com.pe/formulario_plan_den.html';</script>";
+die();
     }
 
     
      else{
-         echo "no haga eso";
+         echo "<script>location.href='http://www.toshiko.com.pe/formulario_plan_den.html';</script>";
+die();
      }
-     header("location:http://www.toshiko.com.pe/formulario_plan_den.html");
+     
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
