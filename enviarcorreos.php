@@ -20,7 +20,7 @@ try {
          $apellido=$_POST['apellido'];
         $correo=$_POST['correo'];
         $telefono=$_POST['telefono'];
-        $asunto=$name." ".$apellido." ".$correo." ".$telefono;
+        $asunto="Nombre Completo ".$name." ".$apellido."<b>"."Correo ".$correo."<br>"."Telefono ".$telefono;
     
         //server 
 
