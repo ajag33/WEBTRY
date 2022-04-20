@@ -20,7 +20,7 @@ try {
          $apellido=$_POST['apellido'];
         $correo=$_POST['correo'];
         $telefono=$_POST['telefono'];
-        $asunto="Nombre Completo ".$name." ".$apellido."<b>"."Correo ".$correo."<br>"."Telefono ".$telefono;
+        $asunto="Nombre Completo ".$name." ".$apellido."</br>"." Correo ".$correo."</br>"." Telefono ".$telefono;
     
         //server 
 
@@ -49,7 +49,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject =$name;
-    $mail->Body    = "<html><body><p><b>Registro de Denuncia.</b></p><p></br><p>Datos Persolanes</p>".$asunto;
+    $mail->Body    = "<html><body><p>Registro de Denuncia.</p></br><p><p>Datos Persolanes</p>".$asunto;
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
