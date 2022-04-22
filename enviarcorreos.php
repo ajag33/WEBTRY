@@ -16,6 +16,8 @@ $mail = new PHPMailer(true);
 
 try {
     if(isset($_POST['enviar'])){
+        date_default_timezone_set('America/Lima');
+        
         $hoy = date("F j, Y, g:i a"); 
         $name=$_POST['nombre'];
          $apellido=$_POST['apellido'];
