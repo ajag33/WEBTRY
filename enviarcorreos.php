@@ -49,7 +49,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject =$name;
-    $mail->Body    = "<html><body><p>Registro de Denuncia.</p></br><p><p>Datos Persolanes</p>".$asunto;
+    $mail->Body    = "<html><body><p>Registro de Denuncia.</p><p><p>Datos Persolanes</p>".$asunto;
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
