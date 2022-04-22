@@ -70,7 +70,7 @@ try {
         <p>Formulario  Denuncia o sugerencias .</p>
         <p>Datos Persolanes</p>".$datospersonales."<p>Involucrados</p>".$involucrados."<p>Asunto</p>".$asunto."
         <div>
-          <p>Aquí tenéis una imagen.</p>
+          
                   
         </div>
       </article>      
