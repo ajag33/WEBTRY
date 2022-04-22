@@ -43,7 +43,8 @@ try {
     //Recipients
     $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'Canal de Denuncia Grupo Toshiko');
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
-   $mail->addAddress('j.balcazar.f@gmail.com');               //Name is optional
+    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
+    $mail->addAddress('administracion@toshiko.com.pe');
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
    // $mail->addBCC('bcc@example.com');
