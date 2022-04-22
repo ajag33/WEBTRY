@@ -1,4 +1,6 @@
 <?php
+
+setlocale(LC_TIME, 'es_ES.UTF-8');
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
