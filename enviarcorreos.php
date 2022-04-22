@@ -16,11 +16,12 @@ $mail = new PHPMailer(true);
 
 try {
     if(isset($_POST['enviar'])){
+        $hoy = date("F j, Y, g:i a"); 
         $name=$_POST['nombre'];
          $apellido=$_POST['apellido'];
         $correo=$_POST['correo'];
         $telefono=$_POST['telefono'];
-        $asunto="Nombre Completo ".$name." ".$apellido."</br>"." Correo ".$correo."</br>"." Telefono ".$telefono;
+        $asunto="Nombre Completo ".$name." ".$apellido."</br>"." Correo ".$correo."</br>"." Telefono ".$telefono."</br>"." Fecha Registro ".$hoy;
     
         //server 
 
