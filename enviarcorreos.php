@@ -1,3 +1,4 @@
+<meta charset='utf-8'>
 <?php
 
 setlocale(LC_TIME, 'es_ES.UTF-8');
