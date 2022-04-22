@@ -29,9 +29,9 @@ try {
     
        $detallehecho=$_POST['detallehecho'];
   
-     
-      
-        $asunto=$name." ".$apellido." ".$involucrado1." ".$involucrado2." ".$involucrado3." ".$puesto1." ".$puesto2." ".$puesto3." ".$detallehecho." ".$contacto;
+     $datospersonales="Nombre ".$name." ".$apellido;
+       $involucrados="Involucrados  "."<br>". "Involucrado 1 ".$involucrado1." puesto"." ".$puesto1." Involucrado 2 ".$involucrado2." puesto ".$puesto2 ." Involucrado 3  ".$involucrado3." puesto ".$puesto3;
+        $asunto=$detallehecho." ".$contacto;
     
         //server 
 
@@ -60,7 +60,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject =$name;
-    $mail->Body    = 'CUERPO DEL CORREO :'.$asunto;
+    $mail->Body    = "<html><body><p>Formulario  Denuncia o sugerencias .</p><p>Datos Persolanes</p>".$datospersonales."<p>Involucrados</p>".$involucrados."<p>Asunto</p>".$asunto;
     $mail->AltBody = 'TEXTO non-HTML mail clients';
 
     $mail->send();
