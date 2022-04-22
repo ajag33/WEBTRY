@@ -48,6 +48,8 @@ try {
     //Recipients
     $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'Mailer');
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
+   $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
+    $mail->addAddress('administracion@toshiko.com.pe');
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
