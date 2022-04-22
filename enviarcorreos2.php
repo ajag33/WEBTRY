@@ -46,7 +46,7 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  ENCRYPTION_SMTPS
 
     //Recipients
-    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'Mailer');
+    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'FORMULARIOS SUGERENCIAS O DENUNCIAS');
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
