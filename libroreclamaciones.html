@@ -510,10 +510,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                             <label class="col-md-12">Documento de Identidad *<span id="body_Label6" class="txt-info-alerta4 "></span>
                                             <span id="body_Label3" class="txt-info-alerta4 "></span></label>
                                             <div>
-                                                 <select name="ctl00$body$ddlTipoDocumento" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlTipoDocumento\&#39;,\&#39;\&#39;)&#39;, 0)" id="body_ddlTipoDocumento" class="form-control" style="height: 38px !important;">
-				<option selected="selected" value="01">DNI</option>
-				<option value="03">CARNÉ DE EXTRANJERIA</option>
-				<option value="04">PASAPORTE</option>
+                                                 <select name="tipodocumento" id="body_ddlTipoDocumento" class="form-control" style="height: 38px !important;">
+				<option selected="selected" value="DNI">DNI</option>
+				<option selected="selected" value="RUC">RUC</option>
+				<option value="CARNE EXTRANJERIA">CARNÉ DE EXTRANJERIA</option>
+				<option value="PASAPORTE">PASAPORTE</option>
 
 			</select>
                                             </div>                                         
@@ -523,7 +524,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
 									    <div class="form-group">
                                             <label class="col-md-12">Número de Documento *<span id="body_Label4" class="txt-info-alerta4 "></span></label>
                                             <div class="col-md-12">                                                
-                                                <input name="ctl00$body$txtNumDocumento" type="text" maxlength="8" id="body_txtNumDocumento" class="col-md-12 form-control" onkeyup="mayus(this);">                                                
+                                                <input name="numerodocumento" type="text" maxlength="8" id="body_txtNumDocumento" class="col-md-12 form-control" onkeyup="mayus(this);">                                                
                                             </div>
                                         </div>
                                     </div> 
@@ -537,7 +538,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                                 <div class="row group-row movil">
                                                     <div class="col-md-6">
                                                         <div class="input-group date">                                                                                                                        
-                                                            <input name="ctl00$body$txtFechaEmisionNatural" type="date" maxlength="10" id="body_txtFechaEmisionNatural" class="form-control">
+                                                            <input name="fechaemision" type="date" maxlength="10" id="body_txtFechaEmisionNatural" class="form-control">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-1"></div>
@@ -559,21 +560,21 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label>Nombres *<span id="body_Label7" class="txt-info-alerta4 "></span></label>
                                             
-                                            <input name="ctl00$body$txtNombres" type="text" maxlength="400" id="body_txtNombres" disabled="disabled" class="aspNetDisabled form-control" onkeyup="mayus(this);">											
+                                            <input name="nombres" type="text" maxlength="400" id="body_txtNombres" disabled="disabled" class="aspNetDisabled form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="col-md-12">Apellido Paterno *<span id="body_Label16" class="txt-info-alerta4 "></span></label>
                                             
-                                            <input name="ctl00$body$txtApePaterno" type="text" maxlength="50" id="body_txtApePaterno" disabled="disabled" class="aspNetDisabled form-control" onkeyup="mayus(this);">											
+                                            <input name="apellidopaterno" type="text" maxlength="50" id="body_txtApePaterno"  class="aspNetDisabled form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
                                     <div class="col-md-3 ultimo">
                                         <div class="form-group">
                                             <label class="col-md-12">Apellido Materno *<span id="body_Label15" class="txt-info-alerta4 "></span></label>
                                             
-                                            <input name="ctl00$body$txtApeMaterno" type="text" maxlength="50" id="body_txtApeMaterno" disabled="disabled" class="aspNetDisabled form-control" onkeyup="mayus(this);">											
+                                            <input name="apellidomaterno" type="text" maxlength="50" id="body_txtApeMaterno"  class="aspNetDisabled form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
 
@@ -586,13 +587,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Correo Electrónico <span id="body_lblCharCorreo">*</span></label>
-                                            <input name="ctl00$body$txtCorreoElec" type="text" maxlength="40" id="body_txtCorreoElec" class="form-control" onkeyup="mayus(this);">	
+                                            <input name="correo" type="text" maxlength="40" id="body_txtCorreoElec" class="form-control" onkeyup="mayus(this);">	
                                         </div>
                                      </div>
                                     <div class="col-md-6 ultimo">
                                         <div class="form-group">
                                             <label class="col-md-12">N° Celular y/o Teléfono</label>
-                                            <input name="ctl00$body$txtTelefono" type="text" maxlength="9" id="body_txtTelefono" class="form-control" onkeyup="mayus(this);">
+                                            <input name="telefono" type="text" maxlength="9" id="body_txtTelefono" class="form-control" onkeyup="mayus(this);">
                                         </div>
                                     </div>                                    
                                 </div>
@@ -602,7 +603,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Domicilio RENIEC <span id="body_Labela8" class="txt-info-alerta4 ">&nbsp;(*)</span></label>
                                             
-                                            <input name="ctl00$body$txtDireccion" type="text" maxlength="250" id="body_txtDireccion" class="form-control" onkeyup="mayus(this);">											
+                                            <input name="domicilioreniec" type="text" maxlength="250" id="body_txtDireccion" class="form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
                                 </div>
@@ -610,7 +611,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
 								    <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="col-md-12">Domicilio Actual *<span id="body_Label8" class="txt-info-alerta4 "></span></label>                                            
-                                            <input name="ctl00$body$txtDireccionReg" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">											
+                                            <input name="domicilio" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
                                 </div>
@@ -619,7 +620,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">País *</label>
                                             <div>
-                                                <select name="ctl00$body$ddlPais" id="body_ddlPais" class="form-control" style="height: 38px !important;" disabled="disabled">
+                                                <select name="pais" id="body_ddlPais" class="form-control" style="height: 38px !important;" disabled="disabled">
 			<option value="0">-Seleccione-</option>
 			<option value="002">AFGANISTAN                              </option>
 			<option value="003">ALBANIA                                 </option>
@@ -816,35 +817,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Departamento *</label>
                                             <div>
-                                                <select name="ctl00$body$ddlDepartamento" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlDepartamento\&#39;,\&#39;\&#39;)&#39;, 0)" id="body_ddlDepartamento" class="form-control" style="height: 38px !important;">
-				<option selected="selected" value="0">-Seleccione-</option>
-				<option value="01">AMAZONAS</option>
-				<option value="02">ANCASH</option>
-				<option value="03">APURIMAC</option>
-				<option value="04">AREQUIPA</option>
-				<option value="05">AYACUCHO</option>
-				<option value="06">CAJAMARCA</option>
-				<option value="08">CUSCO</option>
-				<option value="09">HUANCAVELICA</option>
-				<option value="10">HUANUCO</option>
-				<option value="11">ICA</option>
-				<option value="12">JUNIN</option>
-				<option value="13">LA LIBERTAD</option>
-				<option value="14">LAMBAYEQUE</option>
-				<option value="15">LIMA</option>
-				<option value="16">LORETO</option>
-				<option value="17">MADRE DE DIOS</option>
-				<option value="18">MOQUEGUA</option>
-				<option value="07">P. C. DEL CALLAO</option>
-				<option value="19">PASCO</option>
-				<option value="20">PIURA</option>
-				<option value="21">PUNO</option>
-				<option value="22">SAN MARTIN</option>
-				<option value="23">TACNA</option>
-				<option value="24">TUMBES</option>
-				<option value="25">UCAYALI</option>
-
-			</select>
+                                               <label class="col-md-12">Departamento *<span id="body_Label8" class="txt-info-alerta4 "></span></label>                                            
+                                            <input name="departamento" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">	
                                             </div>
                                         </div>
                                     </div>
@@ -852,9 +826,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Provincia *</label>
                                             <div>
-                                                <select name="ctl00$body$ddlProvincia" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlProvincia\&#39;,\&#39;\&#39;)&#39;, 0)" id="body_ddlProvincia" class="form-control" style="height: 38px !important;">
-
-			</select>
+                                               <label class="col-md-12">Provincia *<span id="body_Label8" class="txt-info-alerta4 "></span></label>                                            
+                                            <input name="provincia" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">	
                                             </div>
                                         </div>
                                     </div>
@@ -862,9 +835,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Distrito *</label>
                                             <div>
-                                                <select name="ctl00$body$ddlDistrito" id="body_ddlDistrito" class="form-control" style="height: 38px !important;">
-
-			</select>
+                                                <label class="col-md-12">Distrito *<span id="body_Label8" class="txt-info-alerta4 "></span></label>                                            
+                                            <input name="distrito" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">	
                                             </div>
                                         </div>
                                     </div>
@@ -882,37 +854,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Lugar donde ocurrió la indicencia: *<span id="body_Label1" class="txt-info-alerta4 "></span></label>
                                             <div>
-                                                <select name="ctl00$body$ddlFunResponsableAnidado" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlFunResponsableAnidado\&#39;,\&#39;\&#39;)&#39;, 0)" id="body_ddlFunResponsableAnidado" class="form-control" style="height: 38px !important;">
-			<option selected="selected" value="0">-Seleccione-</option>
-			<option value="22@JIRÓN HERMOSURA 720 - CHACHAPOYAS - CHACHAPOYAS - AMAZONAS@L452">GERENCIA REGIONAL DE CONTROL DE AMAZONAS</option>
-			<option value="09@JIRÓN JUAN DE LA CRUZ ROME 1113 - HUARAZ - HUARAZ - ANCASH@L425">GERENCIA REGIONAL DE CONTROL DE ANCASH</option>
-			<option value="15@JIRÓN JUNIN 215 - ABANCAY - ABANCAY - APURIMAC@L485">GERENCIA REGIONAL DE CONTROL DE APURÍMAC</option>
-			<option value="02@CALLE EL PERAL 102 - AREQUIPA - AREQUIPA - AREQUIPA@L470">GERENCIA REGIONAL DE CONTROL DE AREQUIPA</option>
-			<option value="16@JIRÓN CALLAO,4TA CDRA 2°PJ 107 - AYACUCHO - HUAMANGA - AYACUCHO@L490">GERENCIA REGIONAL DE CONTROL DE AYACUCHO</option>
-			<option value="10@JIRÓN CAPAC YUPANQUI MZ C - CAJAMARCA - CAJAMARCA - CAJAMARCA@L435">GERENCIA REGIONAL DE CONTROL DE CAJAMARCA</option>
-			<option value="07@CALLE ALMAGRO 123 - CUSCO - CUSCO - CUSCO@L480">GERENCIA REGIONAL DE CONTROL DE CUSCO</option>
-			<option value="19@JIRÓN ANTONIO RAYMONDI 247 - HUANCAVELICA - HUANCAVELICA - HUANCAVELICA@L446">GERENCIA REGIONAL DE CONTROL DE HUANCAVELICA</option>
-			<option value="13@JIRÓN DOS DE MAYO 1759 - HUANUCO - HUANUCO - HUANUCO@L465">GERENCIA REGIONAL DE CONTROL DE HUÁNUCO</option>
-			<option value="11@AVENIDA LOS MAESTROS D-18 - SAN JOSE DE LOS MOLINOS - ICA - ICA@L445">GERENCIA REGIONAL DE CONTROL DE ICA</option>
-			<option value="03@JIRÓN LIMA 338 - HUANCAYO - HUANCAYO - JUNIN@L460">GERENCIA REGIONAL DE CONTROL DE JUNÍN</option>
-			<option value="17@AVENIDA JUAN PABLO II 583 - TRUJILLO - TRUJILLO - LA LIBERTAD@L495">GERENCIA REGIONAL DE CONTROL DE LA LIBERTAD</option>
-			<option value="01@CALLE SIETE DE ENERO SN - CHICLAYO - CHICLAYO - LAMBAYEQUE@L430">GERENCIA REGIONAL DE CONTROL DE LAMBAYEQUE</option>
-			<option value="27@   - HUACHO - HUAURA - LIMA@C823">GERENCIA REGIONAL DE CONTROL DE LIMA PROVINCIAS</option>
-			<option value="04@CALLE NAPO 186 - IQUITOS - MAYNAS - LORETO@L440">GERENCIA REGIONAL DE CONTROL DE LORETO</option>
-			<option value="23@JIRÓN GONZALES PRADA 235 - TAMBOPATA - TAMBOPATA - MADRE DE DIOS@L482">GERENCIA REGIONAL DE CONTROL DE MADRE DE DIOS</option>
-			<option value="18@CALLE CUSCO 440 - MOQUEGUA - MARISCAL NIETO - MOQUEGUA@L476">GERENCIA REGIONAL DE CONTROL DE MOQUEGUA</option>
-			<option value="26@JIRÓN SAN MARTIN 116 - YANACANCHA - PASCO - PASCO@L467">GERENCIA REGIONAL DE CONTROL DE PASCO</option>
-			<option value="05@JIRÓN HUANUCO 200 - PIURA - PIURA - PIURA@L420">GERENCIA REGIONAL DE CONTROL DE PIURA</option>
-			<option value="12@JIRÓN DEUSHUA 822 - PUNO - PUNO - PUNO@L455">GERENCIA REGIONAL DE CONTROL DE PUNO</option>
-			<option value="06@JIRÓN CALLAO 520 - MOYOBAMBA - MOYOBAMBA - SAN MARTIN@L450">GERENCIA REGIONAL DE CONTROL DE SAN MARTÍN</option>
-			<option value="14@CALLE LOS ALAMOS 1976-1978  - POCOLLAY - TACNA - TACNA@L475">GERENCIA REGIONAL DE CONTROL DE TACNA</option>
-			<option value="21@AVENIDA FERNANDO BELAUNDE TE MZ.1 - TUMBES - TUMBES - TUMBES@L422">GERENCIA REGIONAL DE CONTROL DE TUMBES</option>
-			<option value="20@JIRÓN ATAHUALPA 945 - CALLERIA - CORONEL PORTILLO - UCAYALI@L466">GERENCIA REGIONAL DE CONTROL DE UCAYALI</option>
-			<option value="24@AVENIDA ARGENTINA S/N M F2 - NUEVO CHIMBOTE - SANTA - ANCASH@L427">OFICINA DE ENLACE DE LA GERENCIA REGIONAL DE CONTROL ANCASH EN CHIMBOTE</option>
-			<option value="15@JIRÓN JUNIN 215 - ABANCAY - ABANCAY - APURIMAC@L486">OFICINA DE ENLACE DE LA GERENCIA REGIONAL DE CONTROL APURÍMAC EN ANDAHUAYLAS</option>
-			<option value="08@JIRÓN CAMILO CARRILLO 114 - JESUS MARIA - LIMA - LIMA@A260">SEDE CENTRAL LIMA</option>
-
-		</select>	
+                                                <label class="col-md-12">Lugar incidencia *<span id="body_Label8" class="txt-info-alerta4 "></span></label>                                            
+                                            <input name="lugarincidencia" type="text" maxlength="250" id="body_txtDireccionReg" class="form-control" onkeyup="mayus(this);">	
                                             </div>											
                                         </div>
                                     </div>                                    
@@ -921,7 +864,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label class="col-md-12">Centro de Atención: </label>
                                             <div>
-                                                <input name="ctl00$body$txtOtrosLocales" type="text" maxlength="250" id="body_txtOtrosLocales" class="form-control" onkeyup="mayus(this);">
+                                                <input name="centroatencion" type="text" maxlength="250" id="body_txtOtrosLocales" class="form-control" onkeyup="mayus(this);">
                                             </div>											
                                         </div>
                                     
@@ -955,7 +898,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
 								    <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="col-md-12 ">Situación que da lugar al reclamo (máximo 4000 caracteres) *<span id="body_Label13" class="txt-info-alerta4 "></span></label></div>                                            
-                                            <textarea name="ctl00$body$txtDetalleTema" rows="2" cols="20" id="body_txtDetalleTema" class="form-control" onkeyup="mayus(this);" style="height:120px;"></textarea>
+                                            <textarea name="situacion" rows="2" cols="20" id="body_txtDetalleTema" class="form-control" onkeyup="mayus(this);" style="height:120px;"></textarea>
                                             <label id="textarea_feedback" class="align-right">4000 caracteres</label>                                            
                                            
                                         </div>
@@ -994,58 +937,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                     </div>                                    
                                 </div>                                                                
                                 
-                                <div class="row group-row">
-                                    <div class="col-md-4 primero">
-                                        <div class="form-group">
-                                            <label class="col-md-12">Notificación de la Respuesta: * </label>
-                                            <div>
-                                                <select name="ctl00$body$ddlTipoNotificacion" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlTipoNotificacion\&#39;,\&#39;\&#39;)&#39;, 0)" id="body_ddlTipoNotificacion" class="form-control" style="height: 38px !important;">
-			<option selected="selected" value="0601">NOTIFICACIÓN ELECTRÓNICA</option>
-			<option value="0602">NOTIFICACIÓN EN DOMICILIO</option>
-			<option value="0603">NOTIFICACIÓN EN LA SEDE</option>
-
-		</select>	
-                                            </div>											
-                                        </div>
-                                    </div>
-                                    <div class="col-md-1">                                  
-                                        <div id="html-content-holder" style="text-align: center;padding-top: 20px;">
-                                            <img id="body_imgCaptcha" src="data:image/png;base64,R0lGODlh3AAyAPcAAAAAAAAAMwAAZgAAmQAAzAAA/wArAAArMwArZgArmQArzAAr/wBVAABVMwBVZgBVmQBVzABV/wCAAACAMwCAZgCAmQCAzACA/wCqAACqMwCqZgCqmQCqzACq/wDVAADVMwDVZgDVmQDVzADV/wD/AAD/MwD/ZgD/mQD/zAD//zMAADMAMzMAZjMAmTMAzDMA/zMrADMrMzMrZjMrmTMrzDMr/zNVADNVMzNVZjNVmTNVzDNV/zOAADOAMzOAZjOAmTOAzDOA/zOqADOqMzOqZjOqmTOqzDOq/zPVADPVMzPVZjPVmTPVzDPV/zP/ADP/MzP/ZjP/mTP/zDP//2YAAGYAM2YAZmYAmWYAzGYA/2YrAGYrM2YrZmYrmWYrzGYr/2ZVAGZVM2ZVZmZVmWZVzGZV/2aAAGaAM2aAZmaAmWaAzGaA/2aqAGaqM2aqZmaqmWaqzGaq/2bVAGbVM2bVZmbVmWbVzGbV/2b/AGb/M2b/Zmb/mWb/zGb//5kAAJkAM5kAZpkAmZkAzJkA/5krAJkrM5krZpkrmZkrzJkr/5lVAJlVM5lVZplVmZlVzJlV/5mAAJmAM5mAZpmAmZmAzJmA/5mqAJmqM5mqZpmqmZmqzJmq/5nVAJnVM5nVZpnVmZnVzJnV/5n/AJn/M5n/Zpn/mZn/zJn//8wAAMwAM8wAZswAmcwAzMwA/8wrAMwrM8wrZswrmcwrzMwr/8xVAMxVM8xVZsxVmcxVzMxV/8yAAMyAM8yAZsyAmcyAzMyA/8yqAMyqM8yqZsyqmcyqzMyq/8zVAMzVM8zVZszVmczVzMzV/8z/AMz/M8z/Zsz/mcz/zMz///8AAP8AM/8AZv8Amf8AzP8A//8rAP8rM/8rZv8rmf8rzP8r//9VAP9VM/9VZv9Vmf9VzP9V//+AAP+AM/+AZv+Amf+AzP+A//+qAP+qM/+qZv+qmf+qzP+q///VAP/VM//VZv/Vmf/VzP/V////AP//M///Zv//mf//zP///wAAAAAAAAAAAAAAACH5BAEAAPwALAAAAADcADIAAAj/APcJHEiwoMGDCBMqXMiwocOHECNKnEixosWLBHdh3Mixo8ePIEHuGqkxpMmTKFOqfLiLF8mRK2PKnEmzIq9gLV+WrMmzp8+VJIWNdPnyp9GjSCkWFThU586kUKOC1OfHj5WIJA3mdApTqleuYLtGpWo1msSsCW+6JMrVa8ewcHcJJTr3qdt9+lBRAWR2ItqDean4EUzFpdCtce2aTMxY59pga+XmvFsxMF+LfwdSFVyl7z5dg/1oKgg552G2jVM7HnlaMt3JlHvmq3rFc8W/+mgNbmSQneDasYOP1Xt540vfe20PpCV4tPDnRsle9dgSp59N0LPfla4coz622sOP/6063aP0peLTr9QlGDte8t0vku28D7X6+ybXNRdoOb7FwH8sk5FO+BWIkW9l7YPgGBCxN5hzgOlGhXsFIaaYgRguFFhohFHIkH6heWgQc9chBBoVTmWookIIEuZHFw+1OBglCskjmBXd9ccUaheuiOFsoUHIEFkuijiiYI0o5yCDWqXo43AuRsmhkP8xB8gzVVFBpUEbViEgXiR6uZCFYj3Z02YcptkhRxIWM0+QQ2apZokQgWUmTUTO6SKNGMkzGHZAUlGJQ7NFaeRZPJZ5J0j56KVnaPRd9CYVfE4qGlRNObnoSYH6IaZ8uuEo0JsPUpYpgZtyhGZ7G1lK2KulCsR3KnqpRgRaaGpw5Kqeg4o3K621HjTpjR0V+qiWGf6aWaq5CfYnSsYeuqKyiqooY3kmkYpssAMmumx65LhIRkqW9sptWtT2uJ2cVHx57l3pUnatf+/CS2a1PoEoGJP13heWTyQKNm6/Kt4rU6fbEvykncZxhRqdCm9qIUcOk4RTXBEXDCxKiHnLcMbQEYXpvf+C/FV2JHm8scks18lYyzCf9XLMNDc0c80KqUvwzTXjSzPPO/uMc5NwBbvy0C4XnexQBQUEADs=">
-                                        </div>          
-                                        
-                                    </div>
-                                    <div class="col-md-1">                                        
-                                        <input type="image" name="ctl00$body$btnCargaCaptcha" id="body_btnCargaCaptcha" src="./Libro Virtual de Reclamaciones _ Contraloría Perú_files/Reload.png" style="border:0px; margin-top: 20px;margin-left:30px;">
-                                        
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">                                                                                          
-                                            <label class="col-md-12">Texto mostrado *</label>                                            
-                                            <input name="ctl00$body$txtCaptcha" type="text" maxlength="4" id="body_txtCaptcha" class="form-control" onkeyup="mayus(this);">
-                                        </div>
-                                    </div>  
-                                    <div class="col-md-4"></div>
-                                </div>
-                                <div class="row group-row">
-								    <div class="col-md-12">
-                                        <table border="1" style="width: 100%;">
-                                            <tbody><tr>
-                                                <td>
-                                                    <br>
-                                                    <div class="form-check">
-                                                        
-
-                                                        <span class="aspNetDisabled"><input id="body_ckbConfirmaNotificacion" type="checkbox" name="ctl00$body$ckbConfirmaNotificacion" checked="checked" disabled="disabled"></span>
-                                                        
-                                                        <span id="body_lblConfirmaNotificacion" class="form-check-label" style="padding-left: 22px;">Sí, autorizo el envío de la notificación a mi correo electrónico.</span>
-                                                    </div>
-                                                    <br>
-                                                </td>
-                                            </tr>
-                                        </tbody></table>
-                                        
-                                    </div>
-                                </div>
+                                
 
                                 <div class="row group-row">
 								    <div class="col-md-12">
