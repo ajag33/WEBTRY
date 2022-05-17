@@ -33,13 +33,12 @@ try {
         $departamento=$_POST['departamento'];
         $provincia=$_POST['provincia'];
        $distrito=$_POST['distrito'];
-       $lugarincidencia=$_POST['lugarincidencia'];
-       $centroatencion=$_POST['centroatencion'];
+ 
        $situacion=$_POST['situacion'];
   
      $datospersonales="Nombre ".$nombres." ".$apellidopaterno." ".$apellidopamerno." ".$tipodocumento." Nª ".$numerodocumento." Fecha ".$fechaemision." Tel.".$telefono." Correo ".$correo." Domicilio ".$domicilio." ".$pais." Departamento".$departamento." Provincia".$provincia." Distrito".$distrito;
         
-       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$centroatencion." Lugar Procedencia"." ".$lugarincidencia."/  Situacion ".$situacion;
+       $detallepersona="Datos del reclamo "."  Situacion ".$situacion;
        
         $asunto=$detallepersona;
     
@@ -75,7 +74,7 @@ try {
     $mail->Subject =$name;
     $mail->Body    = "<!DOCTYPE html><html lang='es'><body>    
     <header>
-      <h1>Formulario Denuncia Sugerencia</h1>      
+      <h1>Formulario Libro Reclamaciones</h1>      
     </header>    
      <section>      
       <article>
