@@ -39,7 +39,7 @@ try {
   
      $datospersonales="Nombre ".$nombres." ".$apellidopaterno." ".$apellidopamerno." ".$tipodocumento." Nª ".$numerodocumento." Fecha ".$fechaemision." Tel.".$telefono." Correo ".$correo." Domicilio ".$domicilio." ".$pais." Departamento".$departamento." Provincia".$provincia." Distrito".$distrito;
         
-       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$$centroatencion." Lugar Procedencia"." ".$$lugarincidencia."/  Situacion ".$situacion;
+       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$centroatencion." Lugar Procedencia"." ".$lugarincidencia."/  Situacion ".$situacion;
        
         $asunto=$detallepersona;
     
