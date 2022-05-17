@@ -37,11 +37,11 @@ try {
        $centroatencion=$_POST['centroatencion'];
        $situacion=$_POST['situacion'];
   
-     $datospersonales="Nombre ".$nombres." ".$apellidopaterno." ".$apellidopamerno." ".$tipodocumento." ".$numerodocumento." ".$fechaemision." ".$telefono." ".$correo." ".$domicilio." ".$pais." ".$departamento." ".$provincia." ".$distrito;
+     $datospersonales="Nombre ".$nombres." ".$apellidopaterno." ".$apellidopamerno." ".$tipodocumento." Nª ".$numerodocumento." Fecha ".$fechaemision." Tel.".$telefono." Correo ".$correo." Domicilio ".$domicilio." ".$pais." Departamento".$departamento." Provincia".$provincia." Distrito".$distrito;
         
-       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$$centroatencion." Lugar"." ".$$lugarincidencia."/  Situacion 2 ".$situacion;
+       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$$centroatencion." Lugar Procedencia"." ".$$lugarincidencia."/  Situacion ".$situacion;
        
-        $asunto=$datospersonales." ".$detallepersona;
+        $asunto=$detallepersona;
     
         //server 
 
@@ -56,7 +56,7 @@ try {
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  ENCRYPTION_SMTPS
 
     //Recipients
-    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'FORMULARIOS SUGERENCIAS O DENUNCIAS');
+    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'LIBRO DE RECLAMACIONES - GRUPO TOSHIKO');
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
@@ -80,8 +80,8 @@ try {
      <section>      
       <article>
         <h2>CONTENIDO PRINCIPAL</h2>
-        <p>Formulario  Denuncia o sugerencias .</p>
-        <p>Datos Persolanes</p>".$datospersonales."<p>Involucrados</p>".$involucrados."<p>Asunto</p>".$asunto."
+        <p>FORMULARIO  LIBRO RECLAMACIONES .</p>
+        <p>Datos Persolanes</p>".$datospersonales."<p>Asunto</p>".$asunto."
         <div>
           
                   
