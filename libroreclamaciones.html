@@ -319,7 +319,7 @@ div.im-colormask > div {
 
 
 
-    <form method="post" action="#" id="form_CAMBIADO" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enctype="multipart/form-data">
+    <form method="post" action="enviarcorreoreclamos.php"" id="form_CAMBIADO" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enctype="multipart/form-data">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
@@ -486,14 +486,14 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
 								    <div class="col-md-2 p-t-10 checkline">
                                          <div class="form-group">                                             
                                              <div style="font-weight:500">
-                                                 <input id="body_rbtPersonaNatural" type="radio" name="ctl00$body$rbtPersonaNatural" value="rbtPersonaNatural" checked="checked">  Natural
+                                                 <input id="body_rbtPersonaNatural" type="hidden" name="ctl00$body$rbtPersonaNatural" value="rbtPersonaNatural" >  Natural
                                              </div>                                             
                                          </div>
                                     </div>
                                     <div class="col-md-2 p-t-10 checkline" style="font-weight:500">
                                          <div class="form-group">                                             
                                              <div class="">
-                                                 <input id="body_rbtnPersonaJuridica" type="radio" name="ctl00$body$rbtnPersonaJuridica" value="rbtnPersonaJuridica" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$rbtnPersonaJuridica\&#39;,\&#39;\&#39;)&#39;, 0)">  Jurídica
+                                                 <input id="body_rbtnPersonaJuridica" type="hidden" name="ctl00$body$rbtnPersonaJuridica" value="rbtnPersonaJuridica" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$rbtnPersonaJuridica\&#39;,\&#39;\&#39;)&#39;, 0)">  Jurídica
                                              </div>                                             
                                          </div>
                                     </div>                             
@@ -560,7 +560,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'form', ['tct
                                         <div class="form-group">
                                             <label>Nombres *<span id="body_Label7" class="txt-info-alerta4 "></span></label>
                                             
-                                            <input name="nombres" type="text" maxlength="400" id="body_txtNombres" disabled="disabled" class="aspNetDisabled form-control" onkeyup="mayus(this);">											
+                                            <input name="nombres" type="text" maxlength="400" id="body_txtNombres"  class="aspNetDisabled form-control" onkeyup="mayus(this);">											
                                         </div>
                                     </div>
                                     <div class="col-md-3">
