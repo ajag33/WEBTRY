@@ -17,21 +17,31 @@ $mail = new PHPMailer(true);
 try {
     if(isset($_POST['enviar'])){
 
-        $name=$_POST['nombre'];
-         $apellido=$_POST['apellido'];
-        $involucrado1=$_POST['involucrado1'];
-        $involucrado2=$_POST['involucrado2'];
-        $involucrado3=$_POST['involucrado3'];
-        $puesto1=$_POST['puesto1'];
-       $puesto2=$_POST['puesto2'];
-       $puesto3=$_POST['puesto3'];
-       $contacto=$_POST['contacto'];
-    
-       $detallehecho=$_POST['detallehecho'];
+        
+        
+        $tipodocumento=$_POST['tipodocumento'];
+         $numerodocumento=$_POST['numerodocumento'];
+        $fechaemision=$_POST['fechaemision'];
+        $nombres=$_POST['nombres'];
+        $apellidopaterno=$_POST['apellidopaterno'];
+        $apellidomaterno=$_POST['apellidomaterno'];
+       $correo=$_POST['correo'];
+       $telefono=$_POST['telefono'];
+       $domicilio=$_POST['domicilio'];
+       $pais=$_POST['pais'];
+        
+        $departamento=$_POST['departamento'];
+        $provincia=$_POST['provincia'];
+       $distrito=$_POST['distrito'];
+       $lugarincidencia=$_POST['lugarincidencia'];
+       $centroatencion=$_POST['centroatencion'];
+       $situacion=$_POST['situacion'];
   
-     $datospersonales="Nombre ".$name." ".$apellido;
-       $involucrados="Involucrados  "."<br>". "Involucrado 1 ".$involucrado1." puesto"." ".$puesto1."/  Involucrado 2 ".$involucrado2." puesto ".$puesto2 ."/ Involucrado 3  ".$involucrado3." puesto ".$puesto3;
-        $asunto=$detallehecho." ".$contacto;
+     $datospersonales="Nombre ".$nombres." ".$apellidopaterno." ".$apellidopamerno." ".$tipodocumento." ".$numerodocumento." ".$fechaemision." ".$telefono." ".$correo." ".$domicilio." ".$pais." ".$departamento." ".$provincia." ".$distrito;
+        
+       $detallepersona="Datos del reclamo "."<br>". "Centro Atencion ".$$centroatencion." Lugar"." ".$$lugarincidencia."/  Situacion 2 ".$situacion;
+       
+        $asunto=$datospersonales." ".$detallepersona;
     
         //server 
 
@@ -50,6 +60,7 @@ try {
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
+    $mail->addAddress('jabad@toshiko.com.pe');
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
