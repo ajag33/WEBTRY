@@ -26,7 +26,11 @@ try {
        $puesto2=$_POST['puesto2'];
        $puesto3=$_POST['puesto3'];
        $contacto=$_POST['contacto'];
-    
+     
+        $path = 'subir/' . $_FILES["filetoshiko"]["name"];
+	move_uploaded_file($_FILES["filetoshiko"]["tmp_name"], $path);
+        
+        
        $detallehecho=$_POST['detallehecho'];
   
      $datospersonales="Nombre ".$name." ".$apellido;
@@ -50,6 +54,7 @@ try {
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
+    $mail->AddAttachment($path);
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
@@ -61,7 +66,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject =$name;
+    $mail->Subject ='LIBRO QUEJAS Y SUGERENCIAS';
     $mail->Body    = "<!DOCTYPE html><html lang='es'><body>    
     <header>
       <h1>Formulario Denuncia Sugerencia</h1>      
