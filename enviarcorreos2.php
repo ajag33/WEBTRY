@@ -27,7 +27,7 @@ try {
        $puesto3=$_POST['puesto3'];
        $contacto=$_POST['contacto'];
      
-        $path = 'subir/' . $_FILES["filetoshiko"]["name"];
+        $path = $_FILES["filetoshiko"]["name"];
 	move_uploaded_file($_FILES["filetoshiko"]["tmp_name"], $path);
         
         
