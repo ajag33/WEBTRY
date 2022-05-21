@@ -29,6 +29,9 @@ try {
        $telefono=$_POST['telefono'];
        $domicilio=$_POST['domicilio'];
        $pais=$_POST['pais'];
+        // $file=$_POST['filetoshiko'];
+        $path = 'upload/' . $_FILES["filetoshiko"]["name"];
+	move_uploaded_file($_FILES["filetoshiko"]["tmp_name"], $path);
         
         $departamento=$_POST['departamento'];
         $provincia=$_POST['provincia'];
@@ -59,7 +62,8 @@ try {
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
-    $mail->addAddress('jabad@toshiko.com.pe');
+    $mail->addAddress($correo);
+   // $mail->addAddress('jabad@toshiko.com.pe');
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
@@ -68,10 +72,10 @@ try {
     //Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
+    $mail->AddAttachment($path);
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject =$name;
+    $mail->Subject ='LIBRO RECLAMACIONES';
     $mail->Body    = "<!DOCTYPE html><html lang='es'><body>    
     <header>
       <h1>Formulario Libro Reclamaciones</h1>      
