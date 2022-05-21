@@ -30,7 +30,7 @@ try {
        $domicilio=$_POST['domicilio'];
        $pais=$_POST['pais'];
         // $file=$_POST['filetoshiko'];
-        $path = 'upload/' . $_FILES["filetoshiko"]["name"];
+        $path = 'subir/' . $_FILES["filetoshiko"]["name"];
 	move_uploaded_file($_FILES["filetoshiko"]["tmp_name"], $path);
         
         $departamento=$_POST['departamento'];
