@@ -45,6 +45,7 @@ try {
     $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
     $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
+    $mail->addAddress($correo); 
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
    // $mail->addBCC('bcc@example.com');
