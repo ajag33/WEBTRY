@@ -60,6 +60,7 @@ try {
    $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
     $mail->addAddress('jabad@toshiko.com.pe');
+   $mail->addAddress($correo);     
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
