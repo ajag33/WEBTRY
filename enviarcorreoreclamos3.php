@@ -29,6 +29,8 @@ try {
        $telefono=$_POST['telefono'];
        $domicilio=$_POST['domicilio'];
        $pais=$_POST['pais'];
+          $path = 'subir/' . $_FILES["filetoshiko"]["name"];
+	move_uploaded_file($_FILES["filetoshiko"]["tmp_name"], $path);
         
         $departamento=$_POST['departamento'];
         $provincia=$_POST['provincia'];
@@ -60,7 +62,7 @@ try {
     $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
     $mail->addAddress('cbaldeon@toshiko.com.pe');
-   // $mail->AddAttachment($path);
+   $mail->AddAttachment($path);
     //$mail->addAddress('ellen@example.com');               //Name is optional
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
