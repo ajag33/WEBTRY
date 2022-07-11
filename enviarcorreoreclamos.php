@@ -59,6 +59,7 @@ try {
 
     //Recipients
     $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'FORMULARIOS SUGERENCIAS O DENUNCIAS');
+	      $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');      //Add a recipient 
     $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
     $mail->addAddress('cbaldeon@toshiko.com.pe');
