@@ -31,23 +31,21 @@ try {
         //server 
 
          //Server settings
-     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'ajag331@gmail.com';                     //SMTP username
-    $mail->Password   = 'wcufngpbuvqqrdfi';                               //SMTP password
+    $mail->Username   = 'grupotoshiko19@gmail.com';                     //SMTP username
+    $mail->Password   = 'cmvnghcphgeortip';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  ENCRYPTION_SMTPS
 
     //Recipients
-    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'Canal de Denuncia Grupo Toshiko');
-    $mail->addAddress('fgutierrez@toshiko.com.pe', 'Jose User');     //Add a recipient
+    $mail->setFrom('canaldedenuncias@toshiko.com.pe', 'FORMULARIOS SUGERENCIAS O DENUNCIAS');
     $mail->addAddress('canaldedenuncias@toshiko.com.pe');      //Name is optional
     $mail->addAddress('administracion@toshiko.com.pe');
     $mail->addAddress('cbaldeon@toshiko.com.pe');
-    $mail->addAddress('jabad@toshiko.com.pe');
-    $mail->addAddress($correo); 
+    $mail->AddAttachment($path);
     //$mail->addReplyTo('info@example.com', 'Information');
     //$mail->addCC('cc@example.com');
    // $mail->addBCC('bcc@example.com');
