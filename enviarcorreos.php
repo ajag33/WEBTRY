@@ -37,10 +37,10 @@ try {
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'grupotoshiko19@gmail.com';                     //SMTP username
     $mail->Password   = 'cmvnghcphgeortip';                             //SMTP password
-   // $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-   // $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  ENCRYPTION_SMTPS
-   $mail->SMTPSecure = "tls";
-$mail->Port       = 587;     
+   $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+   $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`  ENCRYPTION_SMTPS
+ //  $mail->SMTPSecure = "tls";
+//$mail->Port       = 587;     
         
 
     //Recipients
